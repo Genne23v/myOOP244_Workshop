@@ -95,10 +95,10 @@ namespace sdds {
 	}
 	bool Bill::isValid()const
 	{
+			bool ok = true;
 		if (m_title[0] != '\0' && m_items != nullptr)
 		{
 			int i = 0;
-			bool ok = true;
 			while (i < m_noOfItems)
 			{
 				if (!m_items[i].isValid())
@@ -107,9 +107,8 @@ namespace sdds {
 				}
 				i++;
 			}
-
-			return ok;
 		}
+		return ok;
 	}
 	void Bill::init(const char* title, int noOfItems)
 	{
