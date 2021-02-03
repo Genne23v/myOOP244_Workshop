@@ -1,6 +1,14 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
+
 #ifndef SDDS_BILL_H_
 #define SDDS_BILL_H_
 #include "Item.h"
+#include "cstring.h"
 namespace sdds {
    class Bill {
       char m_title[37];

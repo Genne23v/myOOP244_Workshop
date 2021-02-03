@@ -1,5 +1,13 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
+
 #ifndef SDDS_ITEM_H_
 #define SDDS_ITEM_H_
+#define TAX 0.13
 namespace sdds {
    class Item {
       char m_itemName[21];
