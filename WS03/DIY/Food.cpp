@@ -79,7 +79,7 @@ namespace sdds {
 	}
 	bool Food::isValid()const
 	{
-		if (f_name[0] != '\0' && (m_calories >= 0 && m_calories <= 3000) && (m_time <=4 && m_time > 0))
+		if ((f_name[0] != '\0' && f_name != nullptr) && (m_calories >= 0 && m_calories <= 3000) && (m_time <=4 && m_time > 0))
 		{
 			return true;
 		}

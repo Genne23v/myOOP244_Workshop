@@ -28,7 +28,7 @@ namespace sdds {
 		cout << "+----------------------------------------------------+" << endl;
 		if (isValid())
 		{
-			cout << "|  Daily Calorie Consumption                         |"<<endl;
+			cout << "|  Daily Calorie Consumption                         |" << endl;
 		}
 		else
 		{
@@ -49,7 +49,7 @@ namespace sdds {
 			cout.width(9);
 			cout << totalCalories();
 			cout << " |            |" << endl;
-			
+
 		}
 		else {
 			cout << "|    Invalid Calorie Consumption list                |" << endl;
@@ -101,15 +101,18 @@ namespace sdds {
 	bool CalorieList::add(const char* item_name, int calories, int time)
 	{
 		bool ok = false;
-		if (item_name == nullptr)
+		if (m_itemsAdded < m_noOfFood)
 		{
-			m_items[m_itemsAdded].setEmpty();
-		}
-		else if (m_itemsAdded < m_noOfFood)
-		{
-			m_items[m_itemsAdded].set(item_name, calories, time);
+			if (item_name == nullptr || calories < 0 || (time > 4 || time < 0))
+			{
+				m_items[m_itemsAdded].setEmpty();
+			}
+			else
+			{
+				m_items[m_itemsAdded].set(item_name, calories, time);
+				ok = true;
+			}
 			m_itemsAdded += 1;
-			ok = true;
 		}
 		return ok;
 	}
