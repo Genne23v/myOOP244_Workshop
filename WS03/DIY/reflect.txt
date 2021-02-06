@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+I used class objects for the first time. It’s an exciting start point to think about object and member variables and functions. I continuously learn this semester that object properties are well protected by categorizing into private and public. I studied that this will be much more important when we build a large sized program. So, I learned how to indirectly access data and modify when needed by using public member functions. Through lab and DIY assignments, I feel more comfortable to handle class variables and public functions. Also, I had a chance to experiment library functions for formatting my output on the console. It wasn’t easy to understand the behaviors of those functions but later I feel much better to properly format my output. It makes much more sense to use these library functions rather than manually organize strings and numbers. I feel the power of using libraries and I think that is our purpose of learning computer programming. 
