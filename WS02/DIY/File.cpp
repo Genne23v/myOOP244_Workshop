@@ -1,6 +1,14 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
 #include "File.h"
+//#include "Population.h"
 
 namespace sdds {
    FILE* fptr;
@@ -20,5 +28,12 @@ namespace sdds {
    void closeFile() {
       if (fptr) fclose(fptr);
    }
-
+   bool read(char* postalCode)
+   {
+       return fscanf(fptr, "%3s, ", postalCode) == 1;
+   }
+   bool read(int& population)
+   {
+       return fscanf(fptr, "%d\n", &population) ==1;
+   }
 }
