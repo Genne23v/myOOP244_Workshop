@@ -156,7 +156,7 @@ std::ostream& Canister::display()const
 			cout << " of ";
 			cout.setf(ios::fixed);
 			cout.width(7);
-			cout << volume() << "cc  ";
+			cout << volume() << "cc   ";
 			cout.setf(ios::fixed);
 			cout << this->m_contentName;
 		}
