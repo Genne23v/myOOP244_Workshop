@@ -27,6 +27,9 @@ namespace sdds {
 	{
 		if (Cstr != nullptr && m_usable)
 		{
+			if (m_contentName !- nullptr) {
+				delete[] m_contentName;
+			}
 			m_contentName = new char[strLen(Cstr) + 1];
 			strCpy(m_contentName, Cstr);
 		}
