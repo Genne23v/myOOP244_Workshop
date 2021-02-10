@@ -1,3 +1,10 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
+
 #ifndef SDDS_BOX_H
 #define SDDS_BOX_H
 #include <iostream>
@@ -5,7 +12,7 @@ namespace sdds {
    class Canister {
       char* m_contentName;
       double m_diameter; // in centimeters 
-      double m_hieght;   // in centimeters
+      double m_height;   // in centimeters
       double m_contentVolume;  // in CCs
       bool m_usable;
       void setToDefault();
@@ -15,7 +22,7 @@ namespace sdds {
    public:
       Canister();
       Canister(const char* contentName);
-      Canister(double hieght, double diameter,
+      Canister(double height, double diameter,
          const char* contentName = nullptr);
       ~Canister();
       Canister& setContent(const char* contentName);
