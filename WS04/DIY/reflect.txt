@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week, I had chances to learn constructor and destructors. This week’s workshop assignments gave me a lot of training not just only to construct and destruct objects, but also various overloading techniques and advantages. I can deal with various situations of creating new objects. Now I’m comfortable with using function overloading setting different number of parameters based on user’s potential input. And I realize that this pointer can be very useful that I can explicitly designate pointing object. It looks much more readable and explicit for other code readers. Besides actual coding, I think understanding of what I’m building is very important part of programming. I can now build a program quickly once I understand how my program should flow and how to work. Programming techniques are great to solve a problem but rational thinking and understanding what to build is a great first step to do a job efficiently. 
