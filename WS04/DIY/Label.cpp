@@ -67,7 +67,7 @@ namespace sdds {
 			for (int i = 0; i < len + 2; i++) {
 				cout << m_frame[5];
 			}
-			cout << m_frame[4] << endl;
+			cout << m_frame[4];
 		}
 		return cout;
 	}

@@ -25,6 +25,7 @@ namespace sdds
 	{
 		for (int i = 0; i < m_noOfLabels; i++) {
 			m_labels[i].printLabel();
+			cout << endl;
 		}
 	}
 }
