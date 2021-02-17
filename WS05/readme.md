@@ -1,5 +1,6 @@
 ﻿# Workshop #5: Member Operators, Helper functions
 Version 0.9
+Version 0.91 (Corrected lab due-date to Thursday)
 
 
 In this workshop, you will implement different types of operator overload in a partially developed class.
@@ -18,7 +19,7 @@ Upon successful completion of this workshop, you will have demonstrated the abil
 
 The workshop is divided into two coding parts; part 1, **LAB** and part 2, **DIY**  and one non-coding part:
 
-- ***LAB*** (part 1): worth 50% of the workshop's total price, is due on **Wednesday at 23:59:59** of the week of your scheduled lab.
+- ***LAB*** (part 1): worth 50% of the workshop's total price, is due on **Thursday at 23:59:59** of the week of your scheduled lab.
 
 > Please note that the LAB (part 1) section is **not to be started in your lab session**. You should start it on your own before the day of your lab and join the lab session to ask for help and correct your mistakes.
 
