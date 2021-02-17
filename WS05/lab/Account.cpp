@@ -29,11 +29,11 @@ namespace sdds {
    }
    Account& Account::operator=(int account)
    {
-       if (!(bool)account)
+       if (account < 10000 || account > 99999)
        {
            setEmpty();
        }
-       if (~account == true)
+       if (~*this)
        {
            this->m_number = account;
        }
