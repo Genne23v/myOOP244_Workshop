@@ -115,12 +115,11 @@ namespace sdds {
    }
    double& operator+=(double& balance, const Account& account)
    {
-       double *sum = nullptr;
        if ((bool)account)
        {
-           *sum = balance + (double)account;
+           balance += (double)account;
        }
-       return *sum;
+       return balance;
    }
    std::ostream& Account::display() const{
       if (*this) {  
