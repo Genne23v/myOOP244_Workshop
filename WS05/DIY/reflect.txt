@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week, I learned various operator overloading functions that could be useful in many situations and I think I should continuously think and practice how I can utilize this skill. Redundant use of operator overloading could bring some confusion to other code readers. So, I think the use of operator overloading should be very logical based on common sense. I also learned that various parameter and return types can be declared and used in the code. I think I didn’t have high level of understanding reference type of returns. This week’s workshop gave me more thinking about data type and how to express in the code. In addition, I think I get better at reading compiler’s error messages through cumulative experiences. I deal with compiler issues more quickly and efficiently than before. Especially, I tried to write codes only looking at main function to give myself more thinking when writing codes. I think it was quite successful. I can feel that my skills have been grown. 
