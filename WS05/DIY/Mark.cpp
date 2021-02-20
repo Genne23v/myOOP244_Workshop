@@ -56,7 +56,7 @@ namespace sdds
 		return *this;
 	}
 
-	Mark::operator int() 
+	Mark::operator int()
 	{
 		if (!isValid)
 		{
@@ -65,7 +65,7 @@ namespace sdds
 		return m_score;
 	}
 
-	Mark::operator double() 
+	Mark::operator double()
 	{
 		double gpa = 0.0;
 		if (m_score <= 100 && m_score >= 80) {
@@ -83,28 +83,31 @@ namespace sdds
 		else {
 			gpa = 0.0;
 		}
-		
+
 		return gpa;
 	}
 
-	Mark::operator char() 
+	Mark::operator char()
 	{
 		char grade;
-		if (m_score <= 100 && m_score >= 80) {
-			grade = 'A';
-		}
-		else if (m_score < 80 && m_score >= 70) {
-			grade = 'B';
-		}
-		else if (m_score < 70 && m_score >= 60) {
-			grade = 'C';
-		}
-		else if (m_score < 60 && m_score >= 50) {
-			grade = 'D';
-		}
-		else if (m_score < 50)
+		if (isValid)
 		{
-			grade = 'F';
+			if (m_score <= 100 && m_score >= 80) {
+				grade = 'A';
+			}
+			else if (m_score < 80 && m_score >= 70) {
+				grade = 'B';
+			}
+			else if (m_score < 70 && m_score >= 60) {
+				grade = 'C';
+			}
+			else if (m_score < 60 && m_score >= 50) {
+				grade = 'D';
+			}
+			else if (m_score < 50)
+			{
+				grade = 'F';
+			}
 		}
 		else {
 			grade = 'X';
