@@ -102,6 +102,10 @@ namespace sdds
 		else if (m_score < 60 && m_score >= 50) {
 			grade = 'D';
 		}
+		else if (m_score < 50)
+		{
+			grade = 'F';
+		}
 		else {
 			grade = 'X';
 		}
