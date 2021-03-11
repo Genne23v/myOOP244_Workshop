@@ -178,6 +178,7 @@ namespace sdds {
 	}
 	ostream& TextFile::view(ostream& ostr)const
 	{
+
 		if (m_filename != nullptr)
 		{
 			ostr << m_filename << endl;
@@ -190,8 +191,9 @@ namespace sdds {
 				ostr << m_textLines[i].m_value << endl;
 				if ((i + 1) % m_pageSize == 0)
 				{
+					cin.clear();
 					ostr << "Hit ENTER to continue...";
-					cin.ignore(1000, '\n');
+					cin.ignore(100, '\n');
 				}
 			}
 		}
@@ -202,8 +204,10 @@ namespace sdds {
 	{
 		char temp[50] = { '\0' };
 		istr >> temp;
-		m_filename = new char[strLen(temp) + 1];
-		strCpy(m_filename, temp);
+		/*m_filename = new char[strLen(temp) + 1];
+		strCpy(m_filename, temp);*/
+		cin.ignore(100, '\n');
+		setFilename(temp);
 		setNoOfLines();
 		loadText();
 		return istr;
