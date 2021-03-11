@@ -90,7 +90,7 @@ namespace sdds {
 		//ifstream fin(fileName);
 		if (fout.is_open())
 		{
-			for (int i = 0; i < m_noOfLines; i++)
+			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				fout << m_textLines[i].m_value << endl;
 			}
@@ -99,7 +99,7 @@ namespace sdds {
 
 	void TextFile::setEmpty()
 	{
-		for (int i = 0; i < m_noOfLines; i++)
+		for (unsigned i = 0; i < m_noOfLines; i++)
 		{
 			delete[] m_textLines[i];
 		}
@@ -140,7 +140,7 @@ namespace sdds {
 			//m_textLines = src.m_textLines;
 			m_textLines = new Line[m_noOfLines];
 			
-			for (int i = 0; i < m_noOfLines; i++)
+			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				m_textLines[i].m_value = new char[strLen(src.m_textLines[i].m_value)+1];
 				strCpy(m_textLines[i].m_value, src.m_textLines[i].m_value);
@@ -158,7 +158,7 @@ namespace sdds {
 		{
 			//m_filename = new char[strLen(src.m_filename) + 1];
 			m_textLines = new Line[m_noOfLines];
-			for (int i = 0; i < m_noOfLines; i++)
+			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				m_textLines[i].m_value = new char[strLen(src.m_textLines[i].m_value) + 1];
 				strCpy(m_textLines[i].m_value, src.m_textLines[i].m_value);
@@ -186,7 +186,7 @@ namespace sdds {
 			ostr.fill('=');
 			ostr << "" << endl;
 
-			for (int i = 0; i < m_noOfLines; i++)
+			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				ostr << m_textLines[i].m_value << endl;
 				if ((i + 1) % m_pageSize == 0)
