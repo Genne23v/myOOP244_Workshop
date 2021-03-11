@@ -103,9 +103,7 @@ namespace sdds {
 		{
 			delete[] m_textLines[i];
 		}*/
-		delete[] m_textLines;
 		m_textLines = nullptr;
-		delete[] m_filename;
 		m_filename = nullptr;
 		m_noOfLines = 0;
 	}
