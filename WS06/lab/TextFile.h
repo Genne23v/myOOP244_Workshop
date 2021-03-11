@@ -1,3 +1,9 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
 #ifndef SDDS_TEXTFILE_H__
 #define SDDS_TEXTFILE_H__
 #include <iostream>
@@ -10,8 +16,9 @@ namespace sdds {
       Line& operator=(const char*);
       ~Line();
       friend class TextFile;
+      Line(const Line& src) = delete;
+      void operator=(const Line& src) = delete;
       // copy and copy assignment prevention goes here
-
    };
 
    class TextFile {

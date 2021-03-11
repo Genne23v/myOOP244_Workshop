@@ -1,3 +1,9 @@
+/**********************************************************
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+**********************************************************/
 #ifndef SDDS_CSTRING_H_
 #define SDDS_CSTRING_H_
 namespace sdds {
