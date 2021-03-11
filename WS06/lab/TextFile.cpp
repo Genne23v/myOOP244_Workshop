@@ -190,7 +190,7 @@ namespace sdds {
 				ostr << m_textLines[i].m_value << endl;
 				if ((i + 1) % m_pageSize == 0)
 				{
-					ostr << "Hit ENTER to continue..." << endl;
+					ostr << "Hit ENTER to continue...";
 					cin.ignore(1000, '\n');
 				}
 			}
