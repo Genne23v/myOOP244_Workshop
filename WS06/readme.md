@@ -1,5 +1,6 @@
 ﻿ # Workshop #6: Classes and resources, IO operators
 * Version 0.91 (reviewed, minor modifications to the text) 
+* Version 1.0 (DIY output corrected)
 
 In this workshop, you will implement classes with resources that follow [the rule of 3](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) to be safely copied and assigned.
 
@@ -454,7 +455,7 @@ Copying a **Stats** object should be done safely and doing so it should also cop
 
 ### Operator overloads
 #### Copy assignment
-Assigning a **Stats** object to another should be done safely and the content of the target file should also be overwritten by the source file.
+Assigning a **Stats** object to another should be done safely and the content of the target file should also be overwritten by the content of the source file.
 
 #### Index operator overloads  
 ```C++
