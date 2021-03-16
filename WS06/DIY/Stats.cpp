@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 #include "Stats.h"
 #include "cstring.h"
 namespace sdds {
@@ -96,12 +97,14 @@ namespace sdds {
 		if (fout.is_open())
 		{
 			std::string temp;
+			std::string input;
 			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				for (unsigned j = 0; j < m_noOfCols; j++)
 				{ 
 					temp = std::to_string(m_numberRows[i].m_numbers[j]);
-					fout << temp+',';
+					input = temp.substr(0, temp.size()-2);
+					fout << input + ',';
 				}
 			}
 		}
