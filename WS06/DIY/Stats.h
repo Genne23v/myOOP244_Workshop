@@ -11,8 +11,6 @@
 static double zero = 0.0;
 
 namespace sdds {
-	
-
 	class Numbers {
 		double* m_numbers;
 		Numbers();

@@ -203,6 +203,7 @@ namespace sdds {
 	}
 	double Stats::operator[](unsigned idx)const
 	{
+		zero = 0.0;
 		double ret = zero;
 
 		if (*this)
