@@ -189,7 +189,7 @@ namespace sdds {
 	}
 	double& Stats::operator[](unsigned idx)
 	{
-		double* ret = &zero;
+		double* ret = nullptr;
 
 		if (*this)
 		{
@@ -203,8 +203,7 @@ namespace sdds {
 	}
 	double Stats::operator[](unsigned idx)const
 	{
-		zero = 0.0;
-		double ret = zero;
+		double ret = 0.0;
 
 		if (*this)
 		{
