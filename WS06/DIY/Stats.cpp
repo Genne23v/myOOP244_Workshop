@@ -215,7 +215,7 @@ namespace sdds {
 	}
 	double& Stats::operator[](unsigned idx)
 	{
-		double* ret = nullptr;
+		double* ret = &zero;
 
 		if (*this)
 		{
