@@ -273,6 +273,7 @@ unsigned Stats::occurrence(double min, double max, std::ostream& ostr)
 	
 	if (m_filename != nullptr)
 	{
+		ostr << std::endl;
 		for (unsigned i = 0; i < m_noOfLines; i++)
 		{
 			for (unsigned j = 0; j < m_noOfCols; j++)
