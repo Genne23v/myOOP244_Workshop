@@ -301,7 +301,8 @@ std::ostream& Stats::view(std::ostream& ostr)const
 		ostr.width(strLen(m_filename));
 		ostr.fill('=');
 		ostr << "" << std::endl;
-		;
+		ostr << std::endl;
+		
 		for (unsigned i = 0; i < m_noOfLines; i++)
 		{
 			for (unsigned j = 0; j < m_noOfCols; j++)
