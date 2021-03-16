@@ -8,16 +8,17 @@
 #define __STATS_H__
 #include <iostream>
 
-static double zero = 0.0;
-
 namespace sdds {
 	class Numbers {
 		double* m_numbers;
 		Numbers();
 		~Numbers();
 		friend class Stats;
+	public:
+		double zero = 0.0;
 		Numbers(const Numbers& src) = delete;
 		void operator=(const Numbers& src) = delete;
+
 	};
 	class Stats {
 		Numbers *m_numberRows;
@@ -33,6 +34,7 @@ namespace sdds {
 		void loadNumbers();
 		void saveAs(const char* filename) const;
 	public:
+		double zero = 0.0;
 		Stats(unsigned columnWidth = 15, unsigned noOfColumns = 4, unsigned precision = 2);
 		Stats(const char* filename, unsigned columnWidth = 15, unsigned noOfColumns = 4, unsigned precision = 2);
 		Stats(const Stats& src);
