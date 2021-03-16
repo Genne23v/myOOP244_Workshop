@@ -47,12 +47,12 @@ namespace sdds {
 			m_numCount++;
 			m_noOfLines = (m_numCount / m_noOfCols) + 1;
 
+		}
 			if (m_noOfLines == 0)
 			{
 				delete[] m_filename;
 				m_filename = nullptr;
 			}
-		}
 	}
 	void Stats::loadNumbers()
 	{
