@@ -8,12 +8,13 @@
 #define __STATS_H__
 #include <iostream>
 
+static double zero = 0.0;
+
 namespace sdds {
 	class Numbers {
 		double* m_numbers;
 		Numbers();
 		~Numbers();
-		//Numbers& opereator=(const int*);
 		friend class Stats;
 		Numbers(const Numbers& src) = delete;
 		void operator=(const Numbers& src) = delete;
