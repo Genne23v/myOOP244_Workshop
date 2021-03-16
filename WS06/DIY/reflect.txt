@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week’s workshop was to learn copy constructor and copy assignment with file input/output using fstream. Also, I learned different overloading functions from previous workshop. First of all, this week’s workshop was very challenging as I’m not familiar with file system and it took me a lot of time to understand the program. Since it was not visible how data flows to my data structure, I took tremendous amount of time to understand file stream for both string and numbers. At the same time, I didn’t have much understanding how constructors behave, so it is really difficult to write codes due to my lack of understanding. However, I think it’s worth the time that I spent to understand constructors, more overloading functions, file stream along with 2D array sort. I feel that I should be more comfortable with various constructors and overloading functions. I didn’t have much thoughts about those, but I think it’s very important features of C++.  
