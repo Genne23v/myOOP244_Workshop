@@ -38,21 +38,19 @@ namespace sdds {
 	{
 		std::ifstream file(m_filename);
 
-		if (file.is_open())
-		{
-			while (!file.eof())
-			{
-				m_numCount += (file.get() == ',');
-			}
-			m_numCount++;
-			m_noOfLines = (m_numCount / m_noOfCols) + 1;
 
+		while (!file.eof())
+		{
+			m_numCount += (file.get() == ',');
 		}
-			if (m_noOfLines == 0)
-			{
-				delete[] m_filename;
-				m_filename = nullptr;
-			}
+		m_numCount++;
+		m_noOfLines = (m_numCount / m_noOfCols) + 1;
+
+		if (m_noOfLines == 0)
+		{
+			delete[] m_filename;
+			m_filename = nullptr;
+		}
 	}
 	void Stats::loadNumbers()
 	{
@@ -95,7 +93,7 @@ namespace sdds {
 			{
 				for (unsigned j = 0; j < m_noOfCols; j++)
 					temp = std::to_string(m_numberRows[i].m_numbers[j]);
-					fout << temp+',';
+				fout << temp + ',';
 			}
 		}
 	}
@@ -252,90 +250,90 @@ namespace sdds {
 			}
 		}
 	}
-unsigned Stats::size()const
-{
-	return m_numCount;
-}
-const char* Stats::name() const
-{
-	return m_filename;
-}
-unsigned Stats::occurrence(double min, double max, std::ostream& ostr)
-{
-	int count = 0;
-	
-	if (m_filename != nullptr)
+	unsigned Stats::size()const
 	{
-		for (unsigned i = 0; i < m_noOfLines; i++)
+		return m_numCount;
+	}
+	const char* Stats::name() const
+	{
+		return m_filename;
+	}
+	unsigned Stats::occurrence(double min, double max, std::ostream& ostr)
+	{
+		int count = 0;
+
+		if (m_filename != nullptr)
 		{
-			for (unsigned j = 0; j < m_noOfCols; j++)
+			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
-				if (m_numberRows[i].m_numbers[j] > min && m_numberRows[i].m_numbers[j] < max && m_numberRows[i].m_numbers[j] != 0)
+				for (unsigned j = 0; j < m_noOfCols; j++)
 				{
-					ostr.width(m_colWidth);
-					ostr.fill(' ');
-					ostr.setf(std::ios::fixed);
-					ostr.setf(std::ios::right);
-					ostr.precision(m_precision);
-					ostr << m_numberRows[i].m_numbers[j];
-					count++;
-					if (count % m_noOfCols == 0)
+					if (m_numberRows[i].m_numbers[j] > min && m_numberRows[i].m_numbers[j] < max && m_numberRows[i].m_numbers[j] != 0)
 					{
-						ostr << std::endl;
+						ostr.width(m_colWidth);
+						ostr.fill(' ');
+						ostr.setf(std::ios::fixed);
+						ostr.setf(std::ios::right);
+						ostr.precision(m_precision);
+						ostr << m_numberRows[i].m_numbers[j];
+						count++;
+						if (count % m_noOfCols == 0)
+						{
+							ostr << std::endl;
+						}
 					}
 				}
 			}
-		}
-		ostr << std::endl;
-		ostr << "Total of " << count << " numbers are between " << min << " and " << max << std::endl;
-	}
-	return count;
-}
-std::ostream& Stats::view(std::ostream& ostr)const
-{
-	if (m_filename != nullptr || m_numberRows != nullptr)
-	{
-		ostr << m_filename << std::endl;
-		ostr.width(strLen(m_filename));
-		ostr.fill('=');
-		ostr << "" << std::endl;
-		;
-		for (unsigned i = 0; i < m_noOfLines; i++)
-		{
-			for (unsigned j = 0; j < m_noOfCols; j++)
-			{
-				if (m_numberRows[i].m_numbers[j] != 0)
-				{
-					ostr.width(m_colWidth);
-					ostr.fill(' ');
-					ostr.setf(std::ios::fixed);
-					ostr.setf(std::ios::right);
-					ostr.precision(m_precision);
-					ostr << m_numberRows[i].m_numbers[j];
-				}
-			}
 			ostr << std::endl;
+			ostr << "Total of " << count << " numbers are between " << min << " and " << max << std::endl;
 		}
-		ostr << "Total of " << m_numCount << " listed!" << std::endl;
+		return count;
 	}
-	return ostr;
-}
-std::ostream& operator<<(std::ostream& ostr, const Stats& dst)
-{
-	return dst.view(ostr);
-}
-std::istream& Stats::getFile(std::istream& istr)
-{
-	char temp[50] = { '\0' };
-	istr >> temp;
-	std::cin.ignore(100, '\n');
-	setFilename(temp);
-	setNoOfLines();
-	loadNumbers();
-	return istr;
-}
-std::istream& operator>>(std::istream& istr, Stats& src)
-{
-	return src.getFile(istr);
-}
+	std::ostream& Stats::view(std::ostream& ostr)const
+	{
+		if (m_filename != nullptr || m_numberRows != nullptr)
+		{
+			ostr << m_filename << std::endl;
+			ostr.width(strLen(m_filename));
+			ostr.fill('=');
+			ostr << "" << std::endl;
+			;
+			for (unsigned i = 0; i < m_noOfLines; i++)
+			{
+				for (unsigned j = 0; j < m_noOfCols; j++)
+				{
+					if (m_numberRows[i].m_numbers[j] != 0)
+					{
+						ostr.width(m_colWidth);
+						ostr.fill(' ');
+						ostr.setf(std::ios::fixed);
+						ostr.setf(std::ios::right);
+						ostr.precision(m_precision);
+						ostr << m_numberRows[i].m_numbers[j];
+					}
+				}
+				ostr << std::endl;
+			}
+			ostr << "Total of " << m_numCount << " listed!" << std::endl;
+		}
+		return ostr;
+	}
+	std::ostream& operator<<(std::ostream& ostr, const Stats& dst)
+	{
+		return dst.view(ostr);
+	}
+	std::istream& Stats::getFile(std::istream& istr)
+	{
+		char temp[50] = { '\0' };
+		istr >> temp;
+		std::cin.ignore(100, '\n');
+		setFilename(temp);
+		setNoOfLines();
+		loadNumbers();
+		return istr;
+	}
+	std::istream& operator>>(std::istream& istr, Stats& src)
+	{
+		return src.getFile(istr);
+	}
 }
