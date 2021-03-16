@@ -215,7 +215,7 @@ namespace sdds {
 	}
 	double& Stats::operator[](unsigned idx)
 	{
-		//double* ret = &zero;
+		double* ret = &zero;
 
 		if (*this)
 		{
@@ -223,9 +223,9 @@ namespace sdds {
 			{
 				idx = idx % m_numCount;
 			}
-			return m_numberRows[idx / m_noOfCols].m_numbers[idx % m_noOfCols];
+			ret = &m_numberRows[idx / m_noOfCols].m_numbers[idx % m_noOfCols];
 		}
-		return zero;
+		return *ret;
 	}
 	double Stats::operator[](unsigned idx)const
 	{
