@@ -45,7 +45,11 @@ namespace sdds {
 				m_numCount += (file.get() == ',');
 			}
 			m_numCount++;
-			m_noOfLines = (m_numCount / m_noOfCols) + 1;
+			m_noOfLines = (m_numCount / m_noOfCols);
+			if (m_numCount % m_noOfCols != 0)
+			{
+				m_noOfLines++;
+			}
 
 			if (m_noOfLines == 0)
 			{
@@ -318,7 +322,7 @@ std::ostream& Stats::view(std::ostream& ostr)const
 					ostr << m_numberRows[i].m_numbers[j];
 				}
 			}
-			ostr << std::endl;
+				ostr << std::endl;
 		}
 		ostr << "Total of " << m_numCount << " listed!" << std::endl;
 	}
