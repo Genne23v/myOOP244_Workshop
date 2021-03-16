@@ -77,10 +77,11 @@ namespace sdds {
 						getline(file, temp, ',');
 						m_numberRows[i].m_numbers[j] = std::stod(temp);
 					}
-					/*else
+					else
 					{
-						m_numberRows[i].m_numbers[j] = std::stod('');
-					}*/
+						m_numberRows[i].m_numbers[j] = 0;
+						//std::stod('');
+					}
 				}
 			}
 		}
@@ -307,15 +308,15 @@ std::ostream& Stats::view(std::ostream& ostr)const
 		{
 			for (unsigned j = 0; j < m_noOfCols; j++)
 			{
-				/*if (m_numberRows[i].m_numbers[j] != 0)
-				{*/
+				if (m_numberRows[i].m_numbers[j] != 0)
+				{
 					ostr.width(m_colWidth);
 					ostr.fill(' ');
 					ostr.setf(std::ios::fixed);
 					ostr.setf(std::ios::right);
 					ostr.precision(m_precision);
 					ostr << m_numberRows[i].m_numbers[j];
-				//}
+				}
 			}
 			ostr << std::endl;
 		}
