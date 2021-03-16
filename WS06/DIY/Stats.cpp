@@ -99,8 +99,10 @@ namespace sdds {
 			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				for (unsigned j = 0; j < m_noOfCols; j++)
+				{ 
 					temp = std::to_string(m_numberRows[i].m_numbers[j]);
 					fout << temp+',';
+				}
 			}
 		}
 	}
