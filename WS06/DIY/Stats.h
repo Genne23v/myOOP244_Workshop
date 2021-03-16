@@ -9,7 +9,11 @@
 #include <iostream>
 
 namespace sdds {
+	
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
 	static double zero = 0.0;
+#pragma GCC diagnostic pop
 
 	class Numbers {
 		double* m_numbers;
