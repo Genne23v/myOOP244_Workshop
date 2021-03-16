@@ -99,7 +99,7 @@ namespace sdds {
 		{
 			std::string temp;
 			std::string input;
-			int countTemp = 0;
+			unsigned countTemp = 0;
 			for (unsigned i = 0; i < m_noOfLines; i++)
 			{
 				for (unsigned j = 0; j < m_noOfCols; j++)
