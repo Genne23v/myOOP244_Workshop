@@ -77,10 +77,10 @@ namespace sdds {
 						getline(file, temp, ',');
 						m_numberRows[i].m_numbers[j] = std::stod(temp);
 					}
-					else
+					/*else
 					{
-						m_numberRows[i].m_numbers[j] = NULL;
-					}
+						m_numberRows[i].m_numbers[j] = std::stod('');
+					}*/
 				}
 			}
 		}
@@ -231,14 +231,14 @@ namespace sdds {
 		double temp = 0.0;
 		int r = 0;
 
-		for (int y1 = 0; y1 < m_noOfLines; y1++)
+		for (unsigned y1 = 0; y1 < m_noOfLines; y1++)
 		{
-			for (int x1 = 0; x1 < m_noOfCols; x1++)
+			for (unsigned x1 = 0; x1 < m_noOfCols; x1++)
 			{
 				r = x1 + 1;
-				for (int y2 = y1; y2 < m_noOfLines; y2++)
+				for (unsigned y2 = y1; y2 < m_noOfLines; y2++)
 				{
-					for (int x2 = r; x2 < m_noOfCols; x2++)
+					for (unsigned x2 = r; x2 < m_noOfCols; x2++)
 					{
 						if (compare(m_numberRows[y2].m_numbers[x2], m_numberRows[y1].m_numbers[x1], ascending))
 						{
