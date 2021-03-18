@@ -1,4 +1,3 @@
-
 /**********************************************************
 * Name: Wonkeun No
 * Student ID: 145095196
@@ -22,13 +21,13 @@ namespace sdds {
 	public:
 		MotorVehicle(const char* licensePlate, int yearOfBuild, const char* address = "Factory");
 		void moveTo(const char* address);
-		const char* readLicensePlate();
-		const char* readAddress();
-		int readBuildYear();
-		virtual std::ostream& write(std::ostream& os);
+		const char* readLicensePlate() const;
+		const char* readAddress() const;
+		int readBuildYear() const;
+		virtual std::ostream& write(std::ostream& os)const;
 		virtual std::istream& read(std::istream& is);
 	};
-	std::ostream& operator<<(std::ostream& os, MotorVehicle& src);
+	std::ostream& operator<<(std::ostream& os, const MotorVehicle& src) ;
 	std::istream& operator>>(std::istream& is, MotorVehicle& src);
 }
 #endif // !__MOTORVEHICLE_H__

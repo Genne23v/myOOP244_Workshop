@@ -46,24 +46,24 @@ namespace sdds
 			strCpy(m_address, address);
 		}
 	}
-	const char* MotorVehicle::readLicensePlate()
+	const char* MotorVehicle::readLicensePlate() const
 	{
 		return m_licensePlate;
 	}
-	const char* MotorVehicle::readAddress()
+	const char* MotorVehicle::readAddress() const
 	{
 		return m_address;
 	}
-	int MotorVehicle::readBuildYear()
+	int MotorVehicle::readBuildYear() const
 	{
 		return m_yearOfBuild;
 	}
-	std::ostream& MotorVehicle::write(std::ostream& os)
+	std::ostream& MotorVehicle::write(std::ostream& os)const
 	{
-		os << "| " << m_yearOfBuild << " | " << m_licensePlate << " | " << m_address << "" << std::endl;
+		os << "| " << m_yearOfBuild << " | " << m_licensePlate << " | " << m_address << "";
 		return os;
 	}
-	std::ostream& operator<<(std::ostream& os, MotorVehicle& src)
+	std::ostream& operator<<(std::ostream& os, const MotorVehicle& src)
 	{
 		return src.write(os);
 	}

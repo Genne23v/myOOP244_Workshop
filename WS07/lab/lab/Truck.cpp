@@ -42,7 +42,7 @@ namespace sdds
 
 		return ok;
 	}
-	std::ostream& Truck::write(std::ostream& os)
+	std::ostream& Truck::write(std::ostream& os) const
 	{
 		os << "| ";
 		os << readBuildYear();
@@ -54,11 +54,11 @@ namespace sdds
 
 		return os;
 	}
-	std::ostream& operator<<(std::ostream& os, Truck& src)
+	std::ostream& operator<<(std::ostream& os, const Truck& src)
 	{
 		return src.write(os);
 	}
-	std::istream& Truck::read(std::istream& is)
+	std::istream& Truck::read(std::istream& is) 
 	{
 		MotorVehicle::read(is);
 		std::cout << "Capacity: ";
