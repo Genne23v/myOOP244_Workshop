@@ -9,6 +9,7 @@
 #define __TRUCK_H__
 
 #include "MotorVehicle.h"
+#include "cstring.h"
 
 namespace sdds
 {
