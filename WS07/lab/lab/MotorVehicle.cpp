@@ -20,7 +20,7 @@ namespace sdds
 		}
 		const char* defaultAddress = "Factory";
 		strCpy(m_address, defaultAddress);
-		if (address != defaultAddress)
+		if (strcmp(address, defaultAddress) != 0)
 		{
 			moveTo(address);
 		}
