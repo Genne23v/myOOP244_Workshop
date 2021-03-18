@@ -24,7 +24,7 @@ namespace sdds
 			m_currentLoad += cargo;
 			ok = true;
 		}
-		else
+		else if (m_capacity > m_currentLoad)
 		{
 			m_currentLoad = m_capacity;
 			ok = true;
@@ -60,6 +60,11 @@ namespace sdds
 	}
 	std::istream& Truck::read(std::istream& is)
 	{
+		MotorVehicle::read(is);
+		std::cout << "Capacity: ";
+		is >> m_capacity;
+		std::cout << "Cargo: ";
+		is >> m_currentLoad;
 		return is;
 	}
 	std::istream& operator>>(std::istream& is, Truck& src)

@@ -16,9 +16,11 @@ namespace sdds
 		//m_licensePlate = { '\0', };
 		if (licensePlate != nullptr)
 		{
-			strcpy(m_licensePlate, licensePlate);
+			strCpy(m_licensePlate, licensePlate);
 		}
-		if (address == "Factory")
+		const char* defaultAddress = "Factory";
+		strCpy(m_address, defaultAddress);
+		if (address != defaultAddress)
 		{
 			moveTo(address);
 		}
@@ -41,7 +43,7 @@ namespace sdds
 			std::cout.setf(std::ios::left);
 			std::cout << address;
 			std::cout << "|" << std::endl;
-			strcpy(m_address, address);
+			strCpy(m_address, address);
 		}
 	}
 	const char* MotorVehicle::readLicensePlate()
