@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week I learned the inheritance which I think it’s a very important element of object oriented programming. I haven’t seriously written class inherited programs before, I just watched and read tutorials. It seemed not difficult when watching tutorials. But every time I do workshops, I realize I have enough understanding without hand-on experience. After hours of practice, errors and trials, I learn only way to learn programming is continuously practice based on very solid understanding of fundamentals. As I learn new concepts and syntax every week, I can get easily confused when I don’t have firm knowledges for syntax, rules, error messages. I spent a lot of time to fix a compile error caused from not adding const keyword appropriately. I thought const was a just optional accessory, but it’s very important to nicely write a code and protect class. Also, I have better understanding of shadow functions and how derived class access to base class. 
