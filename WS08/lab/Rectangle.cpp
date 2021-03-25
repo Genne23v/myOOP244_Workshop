@@ -34,7 +34,7 @@ namespace sdds
 		{
 			for (int i = 0; i < m_height; i++)
 			{
-				if (i == 0 || i == m_height - 1)
+				if (i == 0)
 				{
 					os << "+";
 					os.width(m_width - 2);
@@ -42,6 +42,14 @@ namespace sdds
 					os << "";
 					os << "+" << std::endl;
 				} 
+				else if (i == m_height - 1)
+				{
+					os << "+";
+					os.width(m_width - 2);
+					os.fill('-');
+					os << "";
+					os << "+";
+				}
 				else if (i == 1)
 				{
 					os << "|";
