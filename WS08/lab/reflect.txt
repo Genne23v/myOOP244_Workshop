@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week I learned how to set up multiple level hierarchy class inheritance along with more polymorphic concept with abstract class. It was very difficult to figure out what was possibly wrong for a long time, but I think I learn a lot from researching how I should use abstract class and pure virtual function in complex class inheritance. Now I understand that pure virtual function means function to be defined in derived class and how I should construct in this complex situation. Also, I just used cstring without thorough understanding of how each method works. Now I have much better overall understanding of how it works and how I should control the input and output. As I’m learning through many concepts of C++, I feel I need a lot of practice to get comfortable with syntax and concepts. I’ve always felt this is important, but the more I learned, the more I feel difficult. Hand-on experience is really important. 
