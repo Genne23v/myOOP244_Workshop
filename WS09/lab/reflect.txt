@@ -1,0 +1,6 @@
+* Name: Wonkeun No
+* Student ID: 145095196
+* Seneca email: wno@myseneca.ca
+* Section: NGG
+
+This week I learned how to communize the code with template. The workshop is more complicating than I learned in and out of class. So, like the other workshops, it took me some time to understand how the inherited class works with the template. As I continuously practice abstract class and inheritance with workshops and project milestones, I’m getting used to the concept and syntax. At the beginning, it was a very strange behavior when certain function or constructor is called, the flow goes in an unexpected way. But now I have a better knowledge to expect the behavior which I see is improvement. At the same time, I’m learning from both workshop and project how to divide the code into module in a meaningful way. I think it will be much more difficult to divide from the scratch unless I have good knowledge and experiences. As we approach to the end of the semester, I think I’m getting why object oriented programming is different from C based programming. 
