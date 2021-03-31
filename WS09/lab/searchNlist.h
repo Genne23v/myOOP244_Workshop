@@ -20,7 +20,6 @@ namespace sdds
 	bool search(Collection<T>& src, T *arr, int size, N key)
 	{
 		bool found = false;
-		int matches = 0;
 
 		src.resize(0);
 
