@@ -103,7 +103,7 @@ The search function goes through all the elements of the array of objects and ad
 ### listArrayElements
 Lists all the elements of an array. 
 
-Create a function template called **search** that accepts three arguments in any order you prefer:
+Create a function template called **listArrayElements** that accepts three arguments in any order you prefer:
 - A `const char*` for a Title to be printed as the Title of the list.
 - A constant array of templated objects (template type)
 - The number of the elements of the array.
