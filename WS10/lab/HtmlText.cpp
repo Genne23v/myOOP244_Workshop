@@ -3,6 +3,7 @@
 * Student ID: 145095196
 * Seneca email: wno@myseneca.ca
 * Section: NGG
+* I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 **********************************************************/
 #include <iostream>
 #include <fstream>
@@ -66,11 +67,6 @@ namespace sdds {
 		m_title = nullptr;
 	}
 
-	/*char* getContent() const
-	{
-		return Text::getContent();
-	}*/
-
 	char* HtmlText::getFilename() const
 	{
 		return Text::getFilename();
@@ -99,7 +95,7 @@ namespace sdds {
 			{
 				temp += "No title</html></head>\n<body>\n";
 			}
-
+			int i = 0;
 			while (!fin.eof())
 			{
 				fin.get(c);
@@ -127,15 +123,15 @@ namespace sdds {
 				else if (c == ' ' && ms == true)
 				{
 					temp += "&nbsp;";
-					//ms = false;
 				}
 				else
 				{
 					temp += c;
 					ms = false;
 				}
+				i++;
 			}
-			temp += "</body>\n</html>\0";
+			temp += "</body>\n</html>";
 		}
 		fin.close();
 
