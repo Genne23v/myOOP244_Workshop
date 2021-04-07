@@ -134,18 +134,22 @@ namespace sdds {
 
        ifstream fin(m_filename);
        char temp[4096] = { 0 };
+       //char c;
 
        if (fin.is_open())
        {
            int i = 0;
            while (!fin.eof())
            {
-               fin.get(temp[i]);
+               //fin.get(temp[i]);
+               fin.get() >> temp[i];
                i++;
            }
            temp[i] = '\0';
        }
        strCpy(m_content, temp);
+
+       fin.close();
    }
 
    void Text::write(std::ostream& os)const
