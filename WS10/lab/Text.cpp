@@ -3,6 +3,7 @@
 * Student ID: 145095196
 * Seneca email: wno@myseneca.ca
 * Section: NGG
+* I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 **********************************************************/
 #include <fstream>
 #include <string>
@@ -36,7 +37,6 @@ namespace sdds {
            strCpy(m_filename, filename);
            read();
        }
-       //int temp = strlen(m_content);
    }
 
    Text::Text(const Text& src)
@@ -139,17 +139,13 @@ namespace sdds {
 
        if (fin.is_open())
        {
-           //int i = 0;
            fin >> noskipws;
            while (fin >> c)
            {
-               //fin.get(temp[i]);
-               //fin.get() >> temp[i];
-               //i++;
                temp += c;
            }
-           //temp[i] = '\0';
        }
+       cout << temp.size();
        strCpy(m_content, temp.c_str());
 
        fin.close();
