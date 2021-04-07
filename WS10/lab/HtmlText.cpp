@@ -137,7 +137,10 @@ namespace sdds {
 			}
 			temp += "</body>\n</html>\0";
 		}
-		Text::copyContent(temp.c_str());
+		char* converted = nullptr;
+		converted = new char[strLen(temp.c_str()) +1];
+		strCpy(converted, temp.c_str());
+		Text::copyContent(converted);
 	}
 
 	std::ostream& operator<<(std::ostream& os, HtmlText& src)
