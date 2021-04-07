@@ -145,7 +145,6 @@ namespace sdds {
                temp += c;
            }
        }
-       cout << temp.size();
        strCpy(m_content, temp.c_str());
 
        fin.close();
