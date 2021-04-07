@@ -6,6 +6,7 @@
 **********************************************************/
 #include <fstream>
 #include <string>
+#include <cstring>
 #include "Text.h"
 #include "cstring.h"
 
@@ -133,21 +134,23 @@ namespace sdds {
        m_content = new char[length + 1];
 
        ifstream fin(m_filename);
-       char temp[4096] = { 0 };
-       //char c;
+       string temp;
+       char c;
 
        if (fin.is_open())
        {
-           int i = 0;
-           while (!fin.eof())
+           //int i = 0;
+           fin >> noskipws;
+           while (fin >> c)
            {
                //fin.get(temp[i]);
-               fin.get() >> temp[i];
-               i++;
+               //fin.get() >> temp[i];
+               //i++;
+               temp += c;
            }
-           temp[i] = '\0';
+           //temp[i] = '\0';
        }
-       strCpy(m_content, temp);
+       strCpy(m_content, temp.c_str());
 
        fin.close();
    }
