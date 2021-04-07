@@ -127,7 +127,7 @@ namespace sdds {
 				else if (c == ' ' && ms == true)
 				{
 					temp += "&nbsp;";
-					ms = false;
+					//ms = false;
 				}
 				else
 				{
