@@ -91,7 +91,7 @@ namespace sdds {
 			if (m_title != nullptr)
 			{
 				temp.append(m_title);
-				temp += "</html></head>\n<body>\n<h1>";
+				temp += "</title></head>\n<body>\n<h1>";
 				temp.append(m_title);
 				temp += "</h1>/n";
 			}
