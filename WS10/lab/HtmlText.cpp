@@ -93,7 +93,7 @@ namespace sdds {
 				temp.append(m_title);
 				temp += "</title></head>\n<body>\n<h1>";
 				temp.append(m_title);
-				temp += "</h1>/n";
+				temp += "</h1>";
 			}
 			else
 			{
