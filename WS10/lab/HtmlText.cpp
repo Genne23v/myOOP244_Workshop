@@ -97,7 +97,7 @@ namespace sdds {
 				temp += "No title</html></head>\n<body>\n";
 			}
 			
-			while (i < 15769) //(!fin.eof())
+			while (!fin.eof())
 			{
 				fin.get(c);
 				
@@ -111,7 +111,7 @@ namespace sdds {
 					temp += "&gt;";
 					ms = false;
 				}
-				else if (c == '\n' && c != '\0')
+				else if (c == '\n' && i != 15769)
 				{
 					temp += "<br />\n";
 					ms = false;
