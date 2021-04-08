@@ -79,6 +79,7 @@ namespace sdds {
 		std::ifstream fin(getFilename());
 		std::string temp;
 		char c;
+		int i = 0;
 
 		if (fin.is_open())
 		{
@@ -95,8 +96,8 @@ namespace sdds {
 			{
 				temp += "No title</html></head>\n<body>\n";
 			}
-			int i = 0;
-			while (!fin.eof())
+			
+			while (i < 15769) //(!fin.eof())
 			{
 				fin.get(c);
 				
@@ -110,7 +111,7 @@ namespace sdds {
 					temp += "&gt;";
 					ms = false;
 				}
-				else if (c == '\n')
+				else if (c == '\n' && c != '\0')
 				{
 					temp += "<br />\n";
 					ms = false;
