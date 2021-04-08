@@ -81,6 +81,26 @@ namespace sdds {
 		char c;
 		int i = 0;
 
+		//int length = strLen(getContent());
+
+		/*while (i < length)
+		{
+			temp += "<html><head><title>";
+
+			if (m_title != nullptr)
+			{
+				temp.append(m_title);
+				temp += "</title></head>\n<body>\n<h1>";
+				temp.append(m_title);
+				temp += "</h1>\n";
+			}
+			else
+			{
+				temp += "No title</html></head>\n<body>\n";
+			}
+			Text::m_content[i];
+		}*/
+		
 		if (fin.is_open())
 		{
 			temp += "<html><head><title>";
@@ -97,7 +117,7 @@ namespace sdds {
 				temp += "No title</html></head>\n<body>\n";
 			}
 			
-			while (!fin.eof())
+			while (i < 15769) //!fin.eof())
 			{
 				fin.get(c);
 				
@@ -111,7 +131,7 @@ namespace sdds {
 					temp += "&gt;";
 					ms = false;
 				}
-				else if (c == '\n' && i != 15769)
+				else if (c == '\n')
 				{
 					temp += "<br />\n";
 					ms = false;
